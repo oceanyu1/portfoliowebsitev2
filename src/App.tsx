@@ -2,6 +2,7 @@ import './App.css'
 import { SiJavascript, SiPython, SiReact, SiTailwindcss, SiSpringboot, SiTypescript, SiFlask, SiGithub, SiLinkedin, SiInstagram } from 'react-icons/si';
 import { FaJava } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -223,6 +224,7 @@ function App() {
             rel='noopener noreferrer'> Brittany Chiang's</a> portfolio. Built with ❤️ using React and Tailwind CSS, deployed on Vercel.</p>
         </footer>
       </div>
+      <Analytics />
     </div>
   )
 }
