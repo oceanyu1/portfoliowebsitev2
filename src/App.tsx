@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
-    <div className="dark min-h-screen lg:grid lg:grid-cols-[40%_60%]">
+    <div className="min-h-screen lg:grid lg:grid-cols-[40%_60%]">
       {/* Left Sidebar / Nav Column */}
       <div className="lg:sticky lg:top-24 lg:self-start px-10">
         <div className="text-left mb-8">
