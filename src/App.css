@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(28px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Utility class to apply the animation */
+.animate-slide-up {
+  animation: slideUp 600ms cubic-bezier(.22,.9,.35,1) both;
+  will-change: transform, opacity;
+}

@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[40%_60%]">
       {/* Left Sidebar / Nav Column */}
-      <div className="lg:sticky lg:top-24 lg:self-start px-10">
+      <div className="lg:sticky lg:top-24 lg:self-start px-10 animate-slide-up">
         <div className="text-left mb-8">
           <p className='text-sm mb-1'>Hi, I'm...</p>
           <h1 className="text-5xl font-bold text-white mb-2">Ocean Yu</h1>
@@ -47,15 +47,15 @@ function App() {
       <div className='px-10 lg:py-[68px]'>
         {/* About Section */}
         <section id="about" className='text-white text-left mb-10'>
-          <p className='text-gray-300 leading-relaxed mb-4'>
+          <p className='text-gray-200 leading-relaxed mb-4'>
             I'm an aspiring developer passionate about building full stack web applications that solve real-world problems. I enjoy backend work the most,
             specifically designing databases and rest APIs, and have experience with frontend frameworks like React. 
           </p>
-          <p className='text-gray-300 leading-relaxed mb-4'>
+          <p className='text-gray-200 leading-relaxed mb-4'>
             I'm currently working towards my Honours Bachelor of Science in Computer Science with a specialization in AI/ML at Carleton University.
             Outside of class, I spend my time exploring new technologies and building projects to apply what I've learned.
           </p>
-          <p className='text-gray-300 leading-relaxed mb-4'>
+          <p className='text-gray-200 leading-relaxed mb-4'>
             Currently, I'm focusing on strengthening my web development knowledge (specifically Springboot), learning more about software architecture and deployment, and I've 
             recently taken an interest in machine learning. I'm eager to contribute, grow, and collaborate with others, whether it's through internships, 
             open-source contributions, or team projects. I'm excited for the path ahead!
@@ -99,7 +99,7 @@ function App() {
               href="https://ravensrate.ca" 
               target="_blank"
               rel="noopener noreferrer"
-              className='group block bg-[#212529] p-4 sm:p-6 rounded-lg hover:bg-gray-800 text-sm transition-colors duration-200'
+              className='group block bg-[#212529] p-4 sm:p-6 rounded-lg hover:bg-[#23272d] text-sm transition-colors duration-200'
             >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                 <div className="flex-1">
@@ -140,7 +140,7 @@ function App() {
               href="https://github.com/oceanyu1/planttionary" 
               target="_blank"
               rel="noopener noreferrer"
-              className='group block bg-[#212529] p-4 sm:p-6 rounded-lg hover:bg-gray-800 text-sm transition-colors duration-200'
+              className='group block bg-[#212529] p-4 sm:p-6 rounded-lg hover:bg-[#23272d] text-sm transition-colors duration-200'
             >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                 <div className="flex-1">

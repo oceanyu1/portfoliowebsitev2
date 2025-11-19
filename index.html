@@ -12,8 +12,126 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <title>Ocean Yu - Full Stack Developer</title>
   </head>
-  <body class="bg-[radial-gradient(#43484f_1px,transparent_0)] [background-size:20px_20px]">
-    <div id="root"></div>
+  <body class="bg-[#212529] [background-size:20px_20px]">
+    <!-- fullscreen canvas for dot-field (pointer-events:none keeps it non-interactive) -->
+    <canvas id="bg-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;display:block;"></canvas>
+
+    <div id="root" style="position:relative;z-index:1;"></div>
+
+    <!-- particle script: mouse-repelling dots -->
+    <script type="module">
+      const canvas = document.getElementById('bg-canvas');
+      const ctx = canvas.getContext('2d');
+
+      let DPR = Math.max(1, window.devicePixelRatio || 1);
+      function resize() {
+        DPR = Math.max(1, window.devicePixelRatio || 1);
+        canvas.width = Math.floor(window.innerWidth * DPR);
+        canvas.height = Math.floor(window.innerHeight * DPR);
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        initParticles();
+      }
+      window.addEventListener('resize', resize, { passive: true });
+
+      const spacing = 24; // distance between dots
+      const jitter = 6; // initial random offset
+      let particles = [];
+      let cols = 0;
+      let rows = 0;
+
+      function initParticles() {
+        particles = [];
+        cols = Math.ceil(window.innerWidth / spacing) + 1;
+        rows = Math.ceil(window.innerHeight / spacing) + 1;
+        for (let i = 0; i < cols; i++) {
+          for (let j = 0; j < rows; j++) {
+            const baseX = i * spacing + (spacing / 2);
+            const baseY = j * spacing + (spacing / 2);
+            particles.push({
+              baseX,
+              baseY,
+              x: baseX + (Math.random() * jitter * 2 - jitter),
+              y: baseY + (Math.random() * jitter * 2 - jitter),
+              vx: (Math.random() - 0.5) * 0.2,
+              vy: (Math.random() - 0.5) * 0.2,
+            });
+          }
+        }
+      }
+
+      const mouse = { x: -9999, y: -9999, active: false };
+      const repulsionRadius = 80;
+      const repulsionStrength = 1.6;
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        mouse.active = true;
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => {
+        mouse.x = -9999;
+        mouse.y = -9999;
+        mouse.active = false;
+      });
+
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches && e.touches[0]) {
+          mouse.x = e.touches[0].clientX;
+          mouse.y = e.touches[0].clientY;
+          mouse.active = true;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        mouse.x = -9999;
+        mouse.y = -9999;
+        mouse.active = false;
+      });
+
+      function animate() {
+        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+        // draw and update particles
+        for (let p of particles) {
+          // compute repulsion
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 0.0001;
+
+          if (dist < repulsionRadius) {
+            const force = (1 - dist / repulsionRadius) * repulsionStrength;
+            p.vx += (dx / dist) * force;
+            p.vy += (dy / dist) * force;
+          } else {
+            // spring back to base
+            p.vx += (p.baseX - p.x) * 0.02;
+            p.vy += (p.baseY - p.y) * 0.02;
+          }
+
+          // damping
+          p.vx *= 0.92;
+          p.vy *= 0.92;
+
+          p.x += p.vx;
+          p.y += p.vy;
+
+          // draw dot
+          ctx.beginPath();
+          ctx.fillStyle = 'rgba(67,72,79,0.95)'; // cool gray
+          ctx.arc(p.x, p.y, 1, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      resize();
+      requestAnimationFrame(animate);
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
