@@ -13,6 +13,7 @@ function App() {
           <p className='text-sm mb-1'>Hi, I'm...</p>
           <h1 className="text-5xl font-bold text-white mb-2">Ocean Yu</h1>
           <p className="text-gray-300 text-base font-bold">Aspiring Full Stack Developer</p>
+          <p className="text-gray-400 text-sm font-bold">Toronto, Ontario</p>
         </div>
         <nav className="space-y-4 text-left">
           <a href="#about" className="block text-gray-300 hover:text-white">About</a>
@@ -49,7 +50,7 @@ function App() {
         <section id="about" className='text-white text-left mb-10'>
           <p className='text-gray-200 leading-relaxed mb-4'>
             I'm an aspiring developer passionate about building full stack web applications that solve real-world problems. I enjoy backend work the most,
-            specifically designing databases and rest APIs, and have experience with frontend frameworks like React. 
+            specifically designing databases and rest APIs, but I also have some experience with frontend frameworks like React. 
           </p>
           <p className='text-gray-200 leading-relaxed mb-4'>
             I'm currently working towards my Honours Bachelor of Science in Computer Science with a specialization in AI/ML at Carleton University.
