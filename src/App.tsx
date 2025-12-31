@@ -50,33 +50,38 @@ function App() {
         {/* About Section */}
         <section id="about" className='text-white text-left mb-10'>
           <p className='text-slate-100 leading-relaxed mb-4'>
-            I'm currently working as a Software Developer Intern at PLAYTOONit. I like writing software that
+            I'm currently working as a <span className='font-medium text-[#8eaddf]'>Software Developer Intern</span> at <span className='font-medium text-[#8eaddf]'>PLAYTOONit</span>. I like writing software that
             has a real meaning and impact to users, and I strive to continuously improve my skills and knowledge in the field.
           </p>
           <p className='text-slate-100 leading-relaxed mb-4'>
-            Currently, I'm focusing on strengthening my web development knowledge (specifically Springboot), learning more about software architecture and deployment, and I've
+            Currently, I'm focusing on strengthening my web development knowledge (specifically <span className='font-medium text-[#8eaddf]'>Spring Boot</span>), learning more about software architecture and deployment, and I've
             recently taken an interest in machine learning. I'm eager to contribute, grow, and collaborate with others, whether it's through internships,
             open-source contributions, or team projects. I'm excited for the path ahead!
           </p>
           <p className='text-slate-100 leading-relaxed'>
             In my free time, I enjoy
             <a
-              className='font-medium text-[#3B82F6] hover:text-teal-300 focus-visible:text-teal-300'
+              className='font-medium text-[#8eaddf] hover:text-[#bcc6d6] focus-visible:text-teal-300'
               href='https://open.spotify.com/user/powergameruuu?si=a3064aa16e2b4de5'
               target='_blank'
-              rel='noopener noreferrer'> listening to music</a> and
+              rel='noopener noreferrer'> listening to music</a>,
             <a
-              className='font-medium text-[#3B82F6] hover:text-teal-300 focus-visible:text-teal-300'
+              className='font-medium text-[#8eaddf] hover:text-[#bcc6d6] focus-visible:text-teal-300'
               href='https://hevy.com/user/weavure'
               target='_blank'
-              rel='noopener noreferrer'> weightlifting</a>.
+              rel='noopener noreferrer'> weightlifting</a>, and playing 
+            <a
+              className='font-medium text-[#8eaddf] hover:text-[#bcc6d6] focus-visible:text-teal-300'
+              href='https://lolchess.gg/profile/na/SMELLYFARTS-6969/set16'
+              target='_blank'
+              rel='noopener noreferrer'> Teamfight Tactics</a>.
           </p>
         </section>
 
         {/* Education Section */}
         <section id="education" className='text-white text-left mb-10'>
           <h2 className='text-2xl font-semibold mb-6'>Education</h2>
-          <div className='border-l-4 border-[#3B82F6] pl-6'>
+          <div className='border-l-4 border-[#8eaddf] pl-6'>
             <h3 className='text-xl font-medium'>Carleton University</h3>
             <p className='text-sm text-gray-300'>B.C.S. Honours Computer Science - GPA: 11.8/12 • Sept 2024 - Present</p>
             <p className='text-sm text-gray-300 mt-2'>Relevant coursework: Data Structures, Algorithms, Operating Systems.</p>
@@ -86,7 +91,7 @@ function App() {
         {/* Experience Section */}
         <section id="experience" className='text-white text-left mb-10'>
           <h2 className='text-2xl font-semibold mb-6'>Experience</h2>
-          <div className='border-l-4 border-[#3B82F6] pl-6'>
+          <div className='border-l-4 border-[#8eaddf] pl-6'>
             <h3 className='text-xl font-medium'>PLAYTOONit</h3>
             <p className='text-sm text-gray-300'>Software Developer Intern • December 2025 - April 2026</p>
             <p className='text-sm text-gray-300 mt-2'>
@@ -99,7 +104,7 @@ function App() {
         <section id="projects" className='text-white text-left mb-10'>
           <h2 className='text-2xl font-semibold mb-6'>Projects</h2>
 
-          <div className='grid gap-6 mb-4 border-[#3B82F6] border-1 rounded'>
+          <div className='grid gap-6 mb-4 border-[#8eaddf] border-1 rounded'>
             <a
               href="https://ravensrate.ca"
               target="_blank"
@@ -117,9 +122,9 @@ function App() {
                     Achieved 400+ unique visitors, 1000+ page views, and 10+ course reviews in the first week post-launch.
                   </p>
                   <div className='flex flex-wrap gap-2'>
-                    <span className='bg-[#3B82F6] text-white px-3 py-1 rounded text-sm'>React</span>
-                    <span className='bg-[#3B82F6] text-white px-3 py-1 rounded text-sm'>Springboot</span>
-                    <span className='bg-[#3B82F6] text-white px-3 py-1 rounded text-sm'>PostgreSQL</span>
+                    <span className='bg-[#0849b3] text-white px-3 py-1 rounded text-sm'>React</span>
+                    <span className='bg-[#0849b3] text-white px-3 py-1 rounded text-sm'>Springboot</span>
+                    <span className='bg-[#0849b3] text-white px-3 py-1 rounded text-sm'>PostgreSQL</span>
                   </div>
                 </div>
 
@@ -127,7 +132,7 @@ function App() {
                 <div className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 self-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-teal-300 transform group-hover:translate-x-1 transition-transform duration-200"
+                    className="w-6 h-6 text-[#8eaddf] transform group-hover:translate-x-1 transition-transform duration-200"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -140,7 +145,7 @@ function App() {
             </a>
           </div>
 
-          <div className='grid gap-6 mb-4 border-[#3B82F6] border-1 rounded'>
+          <div className='grid gap-6 mb-4 border-[#8eaddf] border-1 rounded'>
             <a
               href="https://github.com/oceanyu1/planttionary"
               target="_blank"
@@ -157,9 +162,9 @@ function App() {
                     Includes a gallery of past submissions, secure file handling, and a demo mode for public deployment.
                   </p>
                   <div className='flex flex-wrap gap-2'>
-                    <span className='bg-[#3B82F6] text-white px-3 py-1 rounded text-sm'>Flask</span>
-                    <span className='bg-[#3B82F6] text-white px-3 py-1 rounded text-sm'>Plant.id API</span>
-                    <span className='bg-[#3B82F6] text-white px-3 py-1 rounded text-sm'>HTML/CSS</span>
+                    <span className='bg-[#0849b3] text-white px-3 py-1 rounded text-sm'>Flask</span>
+                    <span className='bg-[#0849b3] text-white px-3 py-1 rounded text-sm'>Plant.id API</span>
+                    <span className='bg-[#0849b3] text-white px-3 py-1 rounded text-sm'>HTML/CSS</span>
                   </div>
                 </div>
 
@@ -167,7 +172,7 @@ function App() {
                 <div className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 self-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-teal-300 transform group-hover:translate-x-1 transition-transform duration-200"
+                    className="w-6 h-6 text-[#8eaddf] transform group-hover:translate-x-1 transition-transform duration-200"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
