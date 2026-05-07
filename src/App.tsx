@@ -50,7 +50,11 @@ function App() {
         {/* About Section */}
         <section id="about" className='text-white text-left mb-10'>
           <p className='text-slate-100 leading-relaxed mb-4'>
-            I'm currently working as a <span className='font-medium text-[#8eaddf]'>Software Developer Intern</span> at <span className='font-medium text-[#8eaddf]'>PLAYTOONit</span>. I like writing software that
+            I'm currently working as a <span className='font-medium text-[#8eaddf]'>Software Engineering Intern</span> at <a
+              className='font-medium text-[#8eaddf]'
+              href='https://cleargov.com/'
+              target='_blank'
+              rel='noopener noreferrer'>ClearGov</a>. I like writing software that
             has a real meaning and impact to users, and I strive to continuously improve my skills and knowledge in the field.
           </p>
           <p className='text-slate-100 leading-relaxed mb-4'>
@@ -91,6 +95,14 @@ function App() {
         {/* Experience Section */}
         <section id="experience" className='text-white text-left mb-10'>
           <h2 className='text-2xl font-semibold mb-6'>Experience</h2>
+          <div className='border-l-4 border-[#8eaddf] pl-6 mb-6'>
+            <h3 className='text-xl font-medium'>ClearGov</h3>
+            <p className='text-sm text-gray-300'>Software Engineering Intern • May 2026 - August 2026</p>
+            <p className='text-sm text-gray-300 mt-2'>
+              Project to be determined.
+            </p>
+          </div>
+
           <div className='border-l-4 border-[#8eaddf] pl-6'>
             <h3 className='text-xl font-medium'>PLAYTOONit</h3>
             <p className='text-sm text-gray-300'>Software Developer Intern • December 2025 - April 2026</p>
